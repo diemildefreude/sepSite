@@ -1,0 +1,84 @@
+form
+{
+    padding: 0 1rem 1rem 1rem;
+    width: clamp(5rem, 100%, 40rem);
+    margin: 0 auto;
+}
+
+.contact-form label, .contact-form input, 
+.contact-form button
+{
+    display:block;
+}
+.contact-form label, .contact-form input
+{
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+}
+.contact-form input, .contact-form textarea
+{
+    width: 100%;
+}
+.contact-form label
+{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.contact-form input, .contact-form textarea
+{
+    padding: 0.5rem;
+    color: black;
+}
+.contact-form button
+{
+    margin: 2rem auto 0 auto;
+    width: 6rem;
+    height: 2.5rem;
+    font-size: 1.5em;
+    background-color: teal;
+    color: white;
+    border-width: 0;
+    transition: 0.25s;
+}
+.contact-form button:hover
+{
+    background-color: black;
+    color: var(--img-text);
+}
+.submit-notice
+{
+    color: var(--img-text);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    margin: 0 auto;
+}
+.error
+{
+    color: red;
+}
+.cf-turnstile
+{
+    /* border: 10px solid red; */
+    display: flex;
+    justify-content: center;
+}
+.cf-turnstile iframe
+{   
+    display: block;
+    margin: 2rem auto 0;
+}
+/*placeholder e-mail & insta*/
+.contact-info
+{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    display:flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+.contact-info a:link, .contact-info a:visited, .contact-info a:hover /*, a:active*/
+{ 
+    text-decoration:none;
+    color: var(--header-color);
+}

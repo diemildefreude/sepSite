@@ -1,0 +1,23 @@
+## Falg for GoDaddy
+## Options +MultiViews
+
+# php_value display_errors On
+
+## Remove extensions
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+## Redirect from extensions to non-extensions
+RewriteCond %{THE_REQUEST} \s/+(.+?).php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,NE,L]
+
+## Get rid of ?i=1
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^(.*)i=[^&]+(.*)$ [NC]
+RewriteRule ^(.*)$ /$1?%1%2 [R=301,L]
+
+#
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
