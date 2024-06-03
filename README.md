@@ -1,5 +1,5 @@
 # sepSite
-website for artist stephan e perez
+website for artist stephan e perez, online [here](https://selliotp.com).
 
 My first complete website. It's made for me to use, so no cms needed.
 
