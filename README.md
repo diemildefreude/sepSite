@@ -13,7 +13,7 @@ For archive pages (in the 'archives' and 'events' folders) the main text body is
 
 js
 ----------
-Instead of adopting a convenient, ready-made thing like swipe.js or slick-slider, I made an image carousel in vanilla js. The bulk of the code is in slider.js/slider.css and it has two implementations specified in linkCarousel.js/.php and dualCarousel.js/.php. The slider is very full featured with a11y considerations like having windows narrator reading the alt text when tabbing through the image. With narrator off, left/right keys work as well. Clicking images on the dualCarousel zooms in on them, and if you further zoom in on them (with wheel/pinch) and then touch/click to zoom out the page will be restored to 100% scaling. Does not currently support multiple instances of a carousel on a page, just because I haven't needed that. Size of the slider is set in slider.css root.
+Instead of adopting a convenient, ready-made thing like swipe.js or slick-slider, I made an image carousel in vanilla js. The bulk of the code is in slider.js/slider.css and it has two implementations specified in linkCarousel.js/.php and dualCarousel.js/.php. The slider is very full featured with a11y considerations like having windows narrator reading the alt text when tabbing through the image. With narrator off, left/right keys work as well. Horizontal swiping/scrolling can be used to navigate the slider as well. Does not currently support multiple instances of a carousel on a page, just because I haven't needed that, but you could change this by giving each instance unique IDs for its elements. Size of the slider is set in slider.css root.
 
 setup
 ----------
