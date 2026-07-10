@@ -1,5 +1,5 @@
 <?php 
-    $urlBase = "https://selliotp.com/";
+    $urlBase = "https://stephaneperez.net/";
     $url = $urlBase . $urlEnd;
 ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta property="twitter:domain" content="selliotp.com">
+        <meta property="twitter:domain" content="stephaneperez.net">
         <meta property="twitter:url" content="<?php echo $url ?>">
         <meta name="twitter:title" content="<?php echo $title ?>">
         <meta name="twitter:description" content="<?php echo $description ?>">
@@ -40,6 +40,7 @@
             type="image/x-icon"
             x-content-type-options="nosniff">
         <link rel="canonical" href="<?php echo $url ?>">
+        <script src="https://kit.fontawesome.com/dfd3e08cad.js" crossorigin="anonymous"></script>
 
         <!-- <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
         <script>eruda.init();</script> -->

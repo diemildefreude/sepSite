@@ -11,19 +11,15 @@ const loResImgDir = srcRoot + '/lores/';
 
 let startTouches;
 let zoomScale = 1.0;
-//let zoomWidth = zoomImage.offsetWidth;
-//let zoomHeight = zoomImage.offsetHeight;
 let zoomTransX = 0.0;
 let zoomTransY = 0.0;
 const zoomScaleMult = 0.02;
-//console.log(zoomOgWidth, zoomOgHeight);
 
 sliders.push(new Slider('.dual-carousel .gallery-slider', SliderType.Gallery, galZoom));
 sliders.push(new Slider('.dual-carousel .nav-slider', SliderType.Nav, doubleNavMove));
 
 zoomContainer.addEventListener('pointerup', (e) => 
 {
-    console.log("pointer up");
     if(e.button == 0)
     {
         zoomOut();
@@ -37,11 +33,11 @@ zoomContainer.addEventListener('pointerup', (e) =>
     zoomContainer.style.setProperty('--zoom-origin-y', `${50}%`);
     
 });
-zoomContainer.addEventListener('wheel', (e) =>
-{
-    console.log("wheel");
-    zoomOverride(e);
-});
+// zoomContainer.addEventListener('wheel', (e) =>
+// {
+//     console.log("wheel");
+//     zoomOverride(e);
+// });
 zoomContainer.addEventListener('touchstart', (e)=>
 {
     if(e.touches.length == 2)

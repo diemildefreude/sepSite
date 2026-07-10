@@ -27,7 +27,11 @@
                     The overall theme and approach of my work is to use the medium of performance as well as technology to place a magnifying glass on life. The material is often related to memory & nostalgia, or everyday activities. My work should serve to, in the Cageian sense, blur the line between art and life.
                 </p>
                 <p>
-                    Stemming from my background in music, some of my pieces use stringed instruments, either as material for a broader concept (<a href="archives/geometry">geometry</a>, <a href="archives/lettertomom">letter to mom</a>) or as a way to musically control video (<a href="archives/momsiphone">mom's iPhone</a>, <a href="archives/forakari">for akari</a>). More recently, I've branched out into performances that use live cameras without instruments (<a href="archives/whisperingforest">whispering forest</a>, <a href="archives/tooiistory">tooii story</a>, <a href="archives/cartography">cartography</a>) and performances that use very little technology at all (<a href="events/onthejalan">on the jalan</a>). 
+                    Stemming from my background in music, some of my pieces use stringed instruments, either as material for a broader concept (<a href="archives/geometry">geometry</a>, <a href="archives/lettertomom">letter to mom</a>) or as a way to musically control video (<a href="archives/momsiphone">mom's iPhone</a>, <a href="archives/forakari">for akari</a>). 
+                    I also have performances that use live cameras without instruments (<a href="archives/whisperingforest">whispering forest</a>, <a href="archives/tooiistory">tooii story</a>, <a href="archives/cartography">cartography</a>) and performances that use very little technology at all (<a href="events/onthejalan">on the jalan</a>). 
+                </p>
+                <p>
+                    More recently, I've started making internet art: interactive websites like <em><a href="archives/faces">faces</a></em> and <em><a href="archives/showmetheworld">show me the world</a></em> and video-call performances like <em><a href="archives/compressionclassroom">compression classroom</a></em>.
                 </p>
                 <img src="bioImages/01.png" alt="two overlapping round projections on a wall. one shows a map of florida, the other a group photo">
                 <h2 class="heading centered" tabindex="0">background</h2>

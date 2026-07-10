@@ -10,7 +10,6 @@
     margin: 2rem var(--archive-margin);
     line-height: 2.5em;
 }
-
 .info h1
 {
     color:white;
@@ -18,7 +17,6 @@
     text-align: center;
     margin-bottom: 1rem;
 }
-
 .info h2
 {
     color:white;
@@ -26,7 +24,11 @@
     text-align: center;
     margin-bottom: 1rem;
 }
-
+.info a, .info a:link, .info a:visited
+{
+    color: white;
+    text-decoration: underline;
+}
 .statement
 {
     color:white;
@@ -47,6 +49,13 @@
 .statement p
 {
     margin-bottom: 2rem;
+}
+.statement br::before
+{
+    height: 100px;
+    display: block;
+    margin: 10px 0;
+    line-height: 20;
 }
 .statement a:any-link
 {

@@ -7,11 +7,11 @@ function dbConnect()
     // $password = "gM16WXUkJJUtcmI";
     // $database = "if0_36172615_sep_site";
     // $port = "3306";
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "sep_site";
-    $port = "3306";
+    $servername = getenv('DB_HOST') ?: "localhost";
+    $username = getenv('DB_USER') ?: "root";
+    $password = getenv('DB_PASS') ?: "";
+    $database = getenv('DB_NAME') ?: "sep_site";
+    $port = getenv('DB_PORT') ?: "3306";
     $mysqli = new mysqli($servername, 
                                 $username, 
                                 $password, 

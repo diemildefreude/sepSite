@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - DB_HOST=db
+      - DB_USER=${DB_USER:-root}
+      - DB_PASS=${DB_PASS:-sepsite_pass}
+      - DB_NAME=${DB_NAME:-sep_site}
+      - DB_PORT=3306
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_PASS:-sepsite_pass}
+      - MYSQL_DATABASE=${DB_NAME:-sep_site}
+    volumes:
+      - db_data:/var/lib/mysql
+      # Auto-import SQL on first start if the database is empty
+      - ./sep_site.sql:/docker-entrypoint-initdb.d/sep_site.sql
+
+volumes:
+  db_data:

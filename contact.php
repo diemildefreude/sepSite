@@ -50,9 +50,6 @@ if (isset($_POST['submit']))
 if(curl_errno($cUrl))
 {
     $errorMessage = curl_error($cUrl);
-    //echo "<div class='submit-notice error'>cURL error: $errorMessage</div>";
-    //echo "<div class='submit-notice error'>human check failed</div>";
-
     echo "<div class='submit-notice error'>human check failed. message not sent.</div>";
 }
 else
@@ -60,14 +57,6 @@ else
     $response = json_decode($response, true);
     if($response['error-codes'] && count($response['error-codes']) > 0)
     {
-        //echo "<div class='submit-notice error'><p>Cloudflare Turnstile check failed. Error: codes:</p>";
-        // echo '<ul>';
-        // foreach($response['error-codes'] as $e)
-        // {
-        //     echo "<li>$e</li>";
-        // }
-        // echo "</ul></div>";
-        // print_r($response);       
         echo "<div class='submit-notice error'>human check failed. message not sent.</div>";
     }
     else

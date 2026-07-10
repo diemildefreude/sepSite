@@ -21,11 +21,182 @@ SET time_zone = "+00:00";
 -- Database: `sep_site`
 --
 
--- --------------------------------------------------------
+INSERT INTO `performances` (`id`, `title`, `url_title`, `date`, `event_venue`, `city_country`, `video_url`) VALUES
+(22, 'war everywhere', 'wareverywhere', '2025-08-16', '\'NOWAR! Performance Art\' @ MirrorArtSpace', 'chiang mai, thailand', 'https://www.youtube.com/embed/zdybfjiNhjg?si=aBInOKxNH8bzjKja'),
+(23, 'the search', 'thesearch', '2025-12-22', '\'Unlimited #3\' @ MirrorArtSpace', 'chiang mai, thailand', 'https://www.youtube.com/embed/MAUNFLHcIFw?si=3H8VpmJQeXYy2mwx')
+;
 
+CREATE TABLE `alt_wareverywhere` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `alt` varchar(800) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `alt_wareverywhere` (`id`, `alt`) VALUES
+(0, 'the faces of the artists, stephan e perez & junos jungle, alpha-blended with the ACLED conflict map and footage from the trees and buildings outside the venue.'),
+(1, 'view of the artists seated at a small table inside the venue. stephan e perez turns to look at the audience, who are standing around the inside of the room'),
+(2, 'view of the artists seated at a small table inside the venue. View from outside, as the audience members walk towards the entrance.'),
+(3, 'the faces of the artists, alpha-blended with the ACLED conflict map and footage from the trees and buildings outside the venue. photo of the wall projection, pink and teal-tinted'),
+(4, 'view of the artists seated at a small table with a glass of rum and a laptop on it. stephan e perez holds a tabacco pipe. The artists are seated facing the door with their backs to the audience, who are standing around the inside of the room'),
+(5, 'the faces of the artists, alpha-blended with the ACLED conflict map and footage from the trees and buildings outside the venue. photo of the wall projection.'),
+(6, 'the faces of the artists, alpha-blended with the ACLED conflict map and footage from the trees and buildings outside the venue.'),
+(7, 'the faces of the artists, alpha-blended with the ACLED conflict map and footage from the trees and buildings outside the venue.'),
+(8, 'the ACLED conflict map and footage alpha-blended with live footage of the trees and buildings outside the venue.'),
+(9, 'the faces of the artists, alpha-blended with the ACLED conflict map and footage from the trees and buildings outside the venue.'),
+(10, 'live footage of the trees and buildings outside the venue in a shadowy, circular vignette'),
+(11, 'the ACLED conflict map and footage alpha-blended with live footage of the trees and buildings outside the venue.'),
+(12, 'the faces of the artists, alpha-blended with the ACLED conflict map and footage from the trees and buildings outside the venue.')
+;
+
+CREATE TABLE `alt_thesearch` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `alt` varchar(800) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `alt_thesearch` (`id`, `alt`) VALUES
+(0, 'the hands of the artist, stephan e perez, can be seen manning a spaceship console in the dark. The screen of the console shows some analytical data.'),
+(1, 'audience members look on from outside the venue. Inside, a viewport of space can be seen. Stars and planet systems are replaced by three-dimensional words.'),
+(2, 'The screen of the console showing some analytical data.'),
+(3, 'The viewport shows lines moving by quickly, indicative of faster-than-light warp travel. The UI says that a course is set for the destination "governments".'),
+(4, 'A word system floating in 3D space and including the words "Types", "Governments", "Authoritarian". A UI box on the left of the viewport lists types of government: "Democracy", "Oligarchy", "Monarchy", etc.'),
+(5, 'the artist looks down at the console, which shows the face of miaki. They are having a video-call'),
+(6, 'A word system floating in 3D space and including the words "The Coronation". A UI box on the right has the title "Is it Lèse Majesté to want Less Majesty?". The current location is shown to be "Less Majesty"'),
+(7, 'A word system floating in 3D space and including the words "Democracy", "is", and "now". Other systems and words can be seen in the background. The current location is "Democracy"'),
+(8, 'the artist can be seen manning a spaceship console in the dark. The screen of the console shows some analytical data.'),
+(9, 'outside view of the artist leaning over the spaceship console. The room is tinted purple.'),
+(10, 'the artist looks down at the console, which shows the face of miaki. They are having a video-call'),
+(11, 'A word system floating in 3D space and including the words "Democracy Brewing", "click", and "here". Other words can be seen in the background. The current location is "democracy"'),
+(12, 'A word system floating in 3D space and including the words "oligarchy" and "government". A UI box on the left of the viewport gives a definition of Oligarchy. Other systems and words can be seen in the background. The current location is "oligarchy"'),
+(13, 'A word system floating in 3D space and including the words "Lèse Majesté" and "monarchies". Other systems and words can be seen in the background. The current location is "less majesty"'),
+(14, 'the artist is seated cross-legged, back to the console and viewport and playing an otamatone, an electronic instrument in the shape of a music note or tadpole. The viewport shows movement through space.'),
+(15, 'the artist is seated cross-legged in the dark, playing an otamatone, an electronic instrument in the shape of a music note or tadpole.'),
+(16, 'the artist looks on, standing, hands behind his back. He is wearing dark trousers and a green top with vertical buttons going down two thirds of the shirt. Black horizontal stripes run along the bottom and the sides of it.'),
+(17, 'the ship console in the lit venue room. It looks made of cardboard with different-colored foils covering it. It features knobs and levers and room for a laptop to be inserted.')
+;
+
+CREATE TABLE `alt_showmetheworld` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `alt` varchar(800) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `alt_showmetheworld` (`id`, `alt`) VALUES
+(0, 'The words \'and Ganesha!\' in Thai, float across the viewport as we fly through blue-tinted space, motion lines zipping past us. Images of Ganesha float ever closer. Some of them bear a resemblance to one of the organizers of the Love, Peace and Harmony festival'),
+(1, 'various hues of pink lines go by horizontally over a black void'),
+(2, 'as we zoom forward through the pink lines, images of butterflies and orchestra conductors float towards us. The German word for \'Butterfly\' floats by.'),
+(3, 'the german words for \'noodles\' and \'socks\' float by as we ride towards images of feet wearing socks with pasta-designs'),
+(4, 'with blue lines over a black void, images of minions come towards us.');
+
+CREATE TABLE `alt_compressionclassroom` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `alt` varchar(800) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `alt_compressionclassroom` (`id`, `alt`) VALUES
+(0, 'one of the artists, miaki, sits crosslegged playing the Cantini, a black MIDI violin, with a bow. Four audience members look on behind her.'),
+(1, 'image from the chiang mai intro presentation, showing the cover of the book by Harry Lehman, \'Die Digitale Revolution der Musik\'.'),
+(2, 'image of the cantini, a five-stringed electric violin with MIDI output. The tunings of each string as well as the content of the recordings assigned to each one are shown.'),
+(3, 'zoom splitscreen view showing miaki and her audience on the left and stephan, the other artist, with his audience on the right'),
+(4, 'zoom splitscreen view. miaki smiles while holding a sign with \'compression classroom\' written in Thai'),
+(5, 'zoom splitscreen. miaki holds the Cantini close to the camera while stephan and his audience look on'),
+(6, 'miaki holds the Cantini ready to play. stephan leans close to his camera and makes a gesture with both index fingers close to each other, pointed straight up.'),
+(7, 'miaki, having placed the Cantini on a mat, plucks its strings.'),
+(8, 'stephan leans forward, saying something'),
+(9, 'miaki listens while stephan tilts his head down and mimics the posture of a violinist'),
+(10, 'one of the kagoshima audience members has approached miaki\'s camera to talk. stephan and his audience all look towards the camera, listening.'),
+(11, 'both sides of the zoom call say goodbye with the Japanese side waving and the Thai side pressing hands together.');
+
+CREATE TABLE `alt_lovedicemannequins` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `alt` varchar(800) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `alt_lovedicemannequins` (`id`, `alt`) VALUES
+(0, 'the artists, juno\'s jungle and stephan e perez, sit on the blankets of the play area. stephan slowly brings the plain white mannequin closer to the red spider mannequin'),
+(1, 'juno holds a sign up to the camera: love dice mannequins'),
+(2, 'juno holds a sign up to the camera: free game! come play now! in the background, stephan and special guest mora are putting the mannequins in suggestion positions'),
+(3, 'juno holds a sign up to the camera: parental advisory recommended? stephan and mora are putting the mannequins in suggestion positions'),
+(4, 'juno stands, while stephan rolls the dice'),
+(5, 'stephan holds the blue, two-torsoed mannequin while juno crouches with the red spider mannequin'),
+(6, 'juno and stephan put the spider and plain in suggestive positions'),
+(7, 'juno and stephan put the spider and plain in suggestive positions'),
+(8, 'juno, stephan and mora all stand, holding different mannequin lovers'),
+(9, 'special guest boat walks towards the blue mannequin as the others look on'),
+(10, 'stephan and boath put the blue and red mannequins in compromising positions'),
+(11, 'stephan and boath put the blue and red mannequins in compromising positions'),
+(12, 'stephan and boath put the blue and red mannequins in compromising positions'),
+(13, 'juno and stephan stand smiling with the blue mannequin and the game sign between them.');
+
+
+-- --------------------------------------------------------
+INSERT INTO `performances` (`id`, `title`, `url_title`, `date`, `event_venue`, `city_country`, `video_url`) VALUES
+(16, 'straight flush', 'straightflush', '2024-08-09', '\'full house\' @ hin bus depot residency house', 'george town, malaysia', ''),
+(17, 'faces', 'faces', '2024-08-09', 'online', '<a href="https://somanyfaces.in">somanyfaces.in</a>', '')
+;
+
+INSERT INTO `events` (`id`, `title`, `url_title`, `date`, `event_venue`, `city_country`, `video_url`) VALUES
+(10, 'full house', 'fullhouse', '2024-08-09', 'hin bus depot residency house', 'george town, malaysia', '')
+;
 --
 -- Table structure for table `alt_addiction`
 --
+CREATE TABLE `alt_faces` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `alt` varchar(800) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `alt_addiction`
+--
+
+INSERT INTO `alt_faces` (`id`, `alt`) VALUES
+(0, 'cloud of nearby faces, floating in a black void. Some of them overlap, forming shapes.'),
+(1, 'front page of somanyfaces.in with the title and the options: become a face, view faces, statement'),
+(2, 'face input page of somanyfaces.in'),
+(3, 'voice input page of somanyfaces.in'),
+(4, 'cloud of nearby faces, mobile aspect ratio'),
+(5, 'control instructions for viewing faces on somanyfaces.in'),
+(6, 'cloud of distant faces, floating in a black void.');
+
+CREATE TABLE `alt_straightflush` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `alt` varchar(800) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `alt_straightflush
+--
+
+INSERT INTO `alt_straightflush` (`id`, `alt`) VALUES
+(0, 'tea candles and playing cards on a table. The cards are stacked in two piles. The top card in the smaller pile has writing in pen that is hard to read'),
+(1, 'the artist, stephan e perez, sits on a stool at a small square table on the side of the road, holding something'),
+(2, 'wider shot of the artist writing at the table. the surrounding road, trees and skyscrapers can be seen'),
+(3, 'the artist writes on the back of a playing card at the table. Tea candles, cards and a jet lighter are in front of him'),
+(4, 'as the artist writes, about six members of the audience watch him from nearby'),
+(5, 'over-the-shoulder view of the artist writing on a card'),
+(6, 'the artist crouches to place a card on the grassy cement path parallel to the street. Hafiz, the social media guy, leans down to take a photo of the action. Ivan, the Hin Bus Depot curator, looks on to the side.')
+(7, 'the artist walks along the grassy cement path. Behind him are two cards, already placed on the ground with candles on them'),
+(8, 'five audience members stand gathered around one of the cards, as one of them holds it in their hand and shines a smartphone light on it'),
+(9, 'two of the same members examine the card by phone light')
+;
+
+CREATE TABLE `alt_fullhouse` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `alt` varchar(800) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `alt_fullhouse`
+--
+
+INSERT INTO `alt_fullhouse` (`id`, `alt`) VALUES
+(0, 'event flyer. Shows the hin bus depot residency house view from the street. The image is tinted blue and indistinct, white, bubbly shapes are blended with it.'),
+(1, 'a group of about ten event visitors gathers around the artist, stephan e perez, as he writes at a table on the side of the road'),
+(2, 'event visitors enter the newly opened double-doors to the residency house. The front of the house is lit by yellow lights but the inside is dark.'),
+(3, 'faces float on the closed window shutters of the bedroom. The faces are also reflecting off of the window glass and can be seen faintly reflected on the perpendicular wall.'),
+(4, 'the artist discusses with some of the event visitors in front of the house entrance'),
+(5, 'during circle, the 2nd day performance, the artist crouches inside of a circle of candles and blows them out. A recorder (the musical instrument), lays next to his leg.'),
+(6, 'the living room on day 3 of the event. faces can be seen floating on the left wall while many candles are strewn about on the floor and tables')
+;
+
 
 CREATE TABLE `alt_addiction` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -705,7 +876,7 @@ CREATE TABLE `performances` (
 -- Dumping data for table `performances`
 --
 
-INSERT INTO `performances` (`id`, `title`, `url_title`, `date`, `event_venue`, `city_country`, `video_url`) VALUES
+INSERT INTO `performances` (`id`, `title`, `url_title`, `date`, `event_venue`, `city_country`, `video_url`) VALUES 
 (0, 'like tears in rain', 'liketearsinrain', '2018-08-20', '\'9 sense Arts\' @ Y\'s ARTS', 'tokyo, japan', 'https://www.youtube.com/embed/wrBxPx1EXI4?si=-IWXUm7R1lah9gBY'),
 (1, 'eurydice', 'eurydice', '2020-11-28', '\'morning call\' @ BUoY', 'tokyo, japan', 'https://www.youtube.com/embed/VG5Ck46fgFA?si=WB05kVvhZoIPbPfg'),
 (2, 'no seikei', 'noseikei', '2021-12-04', '\'ham tamago sandwich #001\' @ chateau', 'tokyo, japan', 'https://www.youtube.com/embed/LAN9oe2uMKw?si=ICYCUyIeiBpcSJOJ'),
