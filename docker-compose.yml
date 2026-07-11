@@ -1,8 +1,7 @@
 services:
   web:
     build: .
-    ports:
-      - "8081:80"
+    container_name: sepsite-web-1
     volumes:
       - .:/var/www/html
     environment:
@@ -13,9 +12,13 @@ services:
       - DB_PORT=3306
     depends_on:
       - db
+    networks:
+      - npm_default
+      - default
 
   db:
     image: mysql:8.0
+    container_name: sepsite-db-1
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
@@ -23,8 +26,26 @@ services:
       - MYSQL_DATABASE=${DB_NAME:-sep_site}
     volumes:
       - db_data:/var/lib/mysql
-      # Auto-import SQL on first start if the database is empty
       - ./sep_site.sql:/docker-entrypoint-initdb.d/sep_site.sql
+    networks:
+      - default
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: sepsite-phpmyadmin-1
+    environment:
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=${DB_PASS:-sepsite_pass}
+    depends_on:
+      - db
+    networks:
+      - npm_default
+      - default
+
+networks:
+  npm_default:
+    external: true
 
 volumes:
   db_data:
