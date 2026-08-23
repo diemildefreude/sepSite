@@ -5,47 +5,17 @@ services:
     volumes:
       - .:/var/www/html
     environment:
-      - DB_HOST=db
+      - DB_HOST=sep-common-db-1
       - DB_USER=${DB_USER:-root}
       - DB_PASS=${DB_PASS:-sepsite_pass}
       - DB_NAME=${DB_NAME:-sep_site}
       - DB_PORT=3306
-    depends_on:
-      - db
     networks:
       - npm_default
-      - default
-
-  db:
-    image: mysql:8.0
-    container_name: sepsite-db-1
-    command: --default-authentication-plugin=mysql_native_password
-    restart: always
-    environment:
-      - MYSQL_ROOT_PASSWORD=${DB_PASS:-sepsite_pass}
-      - MYSQL_DATABASE=${DB_NAME:-sep_site}
-    volumes:
-      - db_data:/var/lib/mysql
-      - ./sep_site.sql:/docker-entrypoint-initdb.d/sep_site.sql
-    networks:
-      - default
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: sepsite-phpmyadmin-1
-    environment:
-      - PMA_HOST=db
-      - PMA_USER=root
-      - PMA_PASSWORD=${DB_PASS:-sepsite_pass}
-    depends_on:
-      - db
-    networks:
-      - npm_default
-      - default
+      - sep_common_net
 
 networks:
   npm_default:
     external: true
-
-volumes:
-  db_data:
+  sep_common_net:
+    external: true
