@@ -6,8 +6,8 @@ services:
       - .:/var/www/html
     environment:
       - DB_HOST=sep-common-db-1
-      - DB_USER=${DB_USER:-root}
-      - DB_PASS=${DB_PASS:-sepsite_pass}
+      - DB_USER=root
+      - DB_PASS=root
       - DB_NAME=${DB_NAME:-sep_site}
       - DB_PORT=3306
     networks:
