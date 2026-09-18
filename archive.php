@@ -24,7 +24,7 @@
 
     $urlEnd = $archiveType . "/" . $archiveName;
     $title = $archives[$index]->title . " | stephan e perez";
-    $description = $archives[$index]->date . " " . $archives[$index]->eventVenue ;
+    $description = htmlspecialchars(strip_tags($archives[$index]->date . " " . $archives[$index]->eventVenue), ENT_QUOTES, 'UTF-8');
     $ogImg = $archiveType . "/images/" . $archiveName . "/hires/00.jpg";
     $ogType = "article";
     include "headCore.php";
